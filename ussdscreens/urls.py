@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ussd.views import AfricasTalkingUssdGateway
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('africastalking_gateway',
+        AfricasTalkingUssdGateway.as_view(),
+        name='africastalking_url')
 ]
+

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ussd.apps.UssdConfig',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 WSGI_APPLICATION = 'ussdscreens.wsgi.application'
 
 
